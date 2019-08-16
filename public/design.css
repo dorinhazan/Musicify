@@ -1,0 +1,372 @@
+body{
+    margin: 0;
+    border: black 2px solid;
+    width: 1360px;
+    
+}
+#wrapper{
+    margin-top: 0;
+    background: url("https://images.pexels.com/photos/255379/pexels-photo-255379.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940")
+ 
+}
+#wrapper-gird{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+
+}
+
+.lyrics{
+    width: 400px;
+    height: 350px;
+    overflow-y:scroll;
+}
+.name{
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    right:5px;
+    font-size: 3.4vw;
+    margin-left: 1vw;
+    font-family: 'Libre Baskerville';
+}
+.artist{
+    font-size: 1.2vw;
+    height: 10px;
+    margin-left: 1.5vw;
+    font-family: 'Libre Baskerville';
+}
+.album{
+    font-size: 1.2vw;
+    margin-left: 1vw;
+    font-family: 'Libre Baskerville';
+}
+
+::-webkit-scrollbar { 
+    display: none; 
+}
+.icon{
+    width: 150px;
+    height: 150px;
+    margin-bottom: 10px;
+}
+.wrapper-info{
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    margin-top:10px;
+}
+.info{
+    display: grid;
+    position: relative;
+    grid-template-rows: 1fr 1fr;
+
+}
+iframe{
+    display: block;
+    margin-left: 100px;
+    width: 500px;
+    height: 400px;
+    border-radius: 20px;
+}   
+.buttons{
+    display: grid;
+    grid-template-columns: repeat(6 ,1fr);
+}
+#wrapper-handles{
+    display: grid;
+    grid-template-columns: 250px 750px 300px;
+}
+#wrapper-Inp{
+    padding: 10px;
+    position: relative;
+    display: grid;
+    grid-template-columns:  400px 50px;
+}
+#inp{
+    background-color:rgb(8, 8, 8);
+    opacity:0.6;
+    /* displ    ay:block; */
+    width: 340px;
+    height: 50px;
+    margin-left: 18px;
+    /* margin-bottom: 10px; */
+    border-radius: 50px;
+    color: white;
+    font-size: 1.2em;
+    padding-left: 20px
+
+}
+#btn{
+    position:absolute;
+    top:21px;
+    left:345px;
+    width: 30px;
+    height: 24px;
+    text-align: center;
+    background-color: white;
+    border-radius: 50%;
+    padding-top: 8px;
+    border: 2x solid grey;
+    box-shadow: 0 0 4px white;
+    cursor: pointer;
+
+
+}
+
+.bt{
+    border: none;
+    text-decoration: none;
+    background: none;
+    margin-top: 5px;
+    margin-left: 3px;
+    padding-right: 28px;
+    font-family: Notable;
+    font-weight: 100;
+    border-radius: 10px;
+    padding-left: 5px;
+    color: #66696C;
+    background: white;
+    cursor: pointer;
+    border:1.5px solid #66696C;
+
+}
+.bt:hover{
+    background:rgb(194, 28, 28);
+    color: white;
+    background: #66696C;
+   
+}
+.bt-youtube{
+
+    font-size: 2.5em;
+    -webkit-text-stroke: 1px black;
+    color: red;
+    text-shadow:
+        3px 3px 0 #000,
+      -1px -1px 0 #000,  
+       1px -1px 0 #000,
+       -1px 1px 0 #000,
+        1px 1px 0 #000;
+    font-size: 2.5em;
+    margin-right: 5px;
+}
+.bt-album{
+    color: black;
+    font-size: 2.5em;
+    margin-right: 5px;
+    -webkit-text-stroke: 1px black;
+    color: rgb(195, 185, 126);
+    text-shadow:
+        3px 3px 0 #000,
+      -1px -1px 0 #000,  
+       1px -1px 0 #000,
+       -1px 1px 0 #000,
+        1px 1px 0 #000;
+    font-size: 2.5em;
+    margin-right: 5px;
+}
+.bt-playlist{
+ 
+    -webkit-text-stroke: 1px black;
+    color: rgb(240, 211, 50);
+    text-shadow:
+        3px 3px 0 #000,
+      -1px -1px 0 #000,  
+       1px -1px 0 #000,
+       -1px 1px 0 #000,
+        1px 1px 0 #000;
+    font-size: 2.5em;
+    margin-right: 5px;
+
+}
+.bt-lyrics{
+    -webkit-text-stroke: 1px black;
+    color: rgb(158, 155, 140);
+    text-shadow:
+        3px 3px 0 #000,
+      -1px -1px 0 #000,  
+       1px -1px 0 #000,
+       -1px 1px 0 #000,
+        1px 1px 0 #000;
+    font-size: 2.5em;
+    margin-right: 5px;
+}
+.bt-similar{
+    -webkit-text-stroke: 1px black;
+    color: rgb(145, 224, 145);
+    text-shadow:
+        3px 3px 0 #000,
+      -1px -1px 0 #000,  
+       1px -1px 0 #000,
+       -1px 1px 0 #000,
+        1px 1px 0 #000;
+    font-size: 2.5em;
+    margin-right: 5px;
+}
+.bt-equalizer{
+    -webkit-text-stroke: 1px black;
+    color: rgba(251, 79, 79, 0.849);
+    text-shadow:
+        3px 3px 0 #000,
+      -1px -1px 0 #000,  
+       1px -1px 0 #000,
+       -1px 1px 0 #000,
+        1px 1px 0 #000;
+    font-size: 2.5em;
+    margin-right: 5px;
+}
+.icon{
+    border-radius: 10px;
+}
+#songInfo{
+    margin-left: 10px;
+
+}
+.dot{
+    display: block;
+    font-size: 0.5em;
+    margin-top: 8px;
+    color: black;
+
+}
+.wrapper-artist-album{
+    display:grid;
+    grid-template-columns:  auto auto auto;
+    
+}
+.artistCard{
+    background: black;
+    opacity: 0.8;
+    color:white;
+    width: 180px;
+    height: 330px;
+    margin-left: 8px;
+    padding-bottom: 15px;
+    padding-top: 5px;
+    margin-bottom: 15px;
+    margin-top: 5px;
+    border-radius: 20px;
+    border: 2px solid white;
+    font-family: 'PT Sans'
+
+
+}
+.lyricsCard{
+    background: black;
+    opacity: 0.8;
+    color:white;
+    width: 300px;
+    margin-left: 8px;
+    padding-bottom: 15px;
+    padding-top: 5px;
+    margin-bottom: 15px;
+    margin-top: 5px;
+    border-radius: 20px;
+    border: 2px solid white;
+    font-family: 'PT Sans'
+
+
+
+}
+.wrapper-album-songs{
+    display: grid;
+    grid-template-columns: 348px 380px;
+    margin-top: 7px;
+
+
+}
+.albumIcon{
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    width: 348px;
+    height: 350px;
+}
+.listSongs{
+    height: 348px;
+    background: black;
+    opacity: 0.8;
+    color:white;
+    margin-top: 0;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border: 2px solid white;
+}
+#logo{
+    margin-left: 50px;
+    width: 600px;
+}
+#wrapper-youtube-equalizer{
+    display: grid;
+    grid-template-rows: 2fr 1fr;
+}
+
+#goToPlatlist{
+    display:block;
+    position: relative;
+
+
+    margin-left: 18px;
+    margin-bottom: 10px;
+ 
+    color: white;
+    font-size: 1.2em;
+    padding-left: 20px;
+ 
+}
+.try{
+    position: absolute;
+    display: block;
+    top: 1px;
+    left: 30px;
+    -webkit-text-stroke: 1px black;
+    color: rgba(238, 79, 68, 0.979);
+    text-shadow:
+        3px 3px 0 #000,
+      -1px -1px 0 #000,  
+       1px -1px 0 #000,
+       -1px 1px 0 #000,
+        1px 1px 0 #000;
+    font-size: 2.5em;
+    margin-right: 5px;
+}
+.show{
+    font-family: 'Lobster', cursive;
+    font-size: 35px;
+    color: aquamarine;
+    color:rgb(139, 32, 32);
+    text-align: center;
+    margin-left: 1vw;
+    align-items: center;
+    justify-content: right;
+ }
+ .fav{
+    font-size: 2vw;
+    text-align: center;
+ }
+
+ #wrapper-home{
+     position: relative;
+     margin-left: 18px;
+     margin-bottom: 10px;
+
+     padding-left: 20px;
+     top: 0;
+
+    
+     
+ }
+ #home{
+    position: absolute;
+    display: block;
+    top: 15px;
+    left: 30px;
+    -webkit-text-stroke: 1px rgb(0, 0, 0);
+    color: rgba(79, 229, 255, 0.979);
+    text-shadow:
+        3px 3px 0 #000,
+      -1px -1px 0 #000,  
+       1px -1px 0 #000,
+       -1px 1px 0 #000,
+        1px 1px 0 #000;
+    font-size: 2.5em;
+    margin-right: 5px;
+ }

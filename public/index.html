@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Music App</title>
+    <link rel="stylesheet" href="design.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/256e7cbdef.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Libre Baskerville' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=PT Sans' rel='stylesheet'>
+
+</head>
+<!-- ----------------------------------------------------------------------------------------------------------- -->
+
+<body>
+    <div id="wrapper">
+        <img id='logo' src="Logo.png">
+        <div id="wrapper-Inp">
+            <input type="text" id='inp' placeholder='Enter song'>
+            <a id="goToPlatlist" href="playlist.html" ><div class="try"><i class="fas fa-headphones-alt"></i></div></a>
+            <i class="fas fa-search" id="btn"></i>
+        </div>
+
+
+        <div id='wrapper-gird'>
+            <div id="songInfo"></div>
+            <div id='wrapper-youtube-equalizer'>
+                <div id="youtube"></div>
+                <div id="equalizer"></div>
+            </div>
+        </div>
+
+        <div id="wrapper-handles">
+            <div id="similar-artist"></div>
+            <div id="similar-album"></div>
+            <div class="lyrics"></div>
+        </div>
+    </div>
+    
+    <!-- ----------------------------------------------------------------------------------------------------------- -->
+
+    <!-- youtube script -->
+
+    <script id='templateYoutube' type="text/x-handlebars-template">
+            <iframe width="854" height="480" src={{src}} frameborder="0" allowfullscreen></iframe> 
+</script>
+
+    <!-- album script -->
+    <script id='templateAlbums' type="text/x-handlebars-template">
+    <div class="wrapper-album-songs">
+        <img class = "albumIcon" src={{icon}}>
+        <ol class="listSongs">
+                <h3>{{albumName}}</h3>
+            {{#each tracks}}
+                <li>{{name}}</li>
+            {{/each}} 
+        </ol>   
+    </div>  
+</script>
+
+    <!-- similar artist script -->
+    <script id="templateArtists" type="text/x-handlebars-template">
+       <ul class='artistCard'> <h2>Similar Artists:</h2>
+       {{#each data}}
+       <li> {{this}} </li>
+       {{/each}}
+       </ul>
+</script>
+
+
+    <!-- song info script -->
+    <script id="song-template" type="text/x-handlebars-template">
+           {{#each info}}
+    <div class='something'>
+        <div class='wrapper-info'>
+            <img class='icon' src="{{Icon}}">
+            <div class='info'>
+               <div  class='name'>{{song}}</div>
+               <div class= 'wrapper-artist-album'>
+                    <div class='artist'>{{artist}}</div> 
+                    <i class="fas fa-circle dot"> </i>
+                    <div class='album'> {{album}}</div>
+                </div>
+            </div>
+                              
+      </div>
+      <div class ='buttons'>
+            <i class="fab fa-youtube bt-youtube" title="Youtube"></i>
+            <i class="fas fa-compact-disc bt-album" title="Album songs"></i>
+            <i class="fas fa-bookmark bt-playlist" title="Add to playlist"></i>
+            <i class="fas fa-microphone-alt bt-lyrics" title="Lyrics"></i>
+            <i class="fas fa-users bt-similar" title="Similar artist"></i>
+            <!-- <i class="fas fa-sliders-h bt-equalizer" title="equ"></i> -->
+
+            
+      
+        </div>
+       </div>
+    </div>
+    <hr>
+       {{/each}}
+
+</script>
+
+    <!-- lyrics script -->
+    <script id='lyrics-template' type="text/x-handlebars-template">
+        <div class= 'lyricsCard'>  <h3>Lyrics:</h3> {{lyrics}}</div>
+ </script>
+
+  <!-- equalizer script -->
+  <script id='equalizer-template' type="text/x-handlebars-template">
+    <div class= "e1 e"></div>
+    <div class= "e2 e"></div>
+    <div class= "e3 e"></div>
+    <div class= "e4 e"></div>
+    <div class= "e5 e"></div>
+    <div class= "e6 e"></div>
+</script>
+
+
+    <!-- ----------------------------------------------------------------------------------------------------------- -->
+    <script src="Songs-class.js"></script>
+    <script src="Renderer.js"></script>
+    <script src="main.js"></script>
+</body>
+
+
+
+</html>
