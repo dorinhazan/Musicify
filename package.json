@@ -2,7 +2,7 @@
   "name": "media-player",
   "version": "1.0.0",
   "engines": {
-    "node": "v12.8.0"
+    "node": "12.8.0"
   },
   "main": "server.js",
   "scripts": {
