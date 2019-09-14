@@ -9,7 +9,7 @@ const SongsApi = require('./app/routes/songs-router')
 // const xyz = require('./app/lib/SongsApi')
 const spotify = require('./app/lib/spotify')
 const lyrics = require('./app/lib/lyrics')
-const PORT = process.env.SERVER_PORT
+const PORT = 3031
 const mongoose = require('mongoose')
 
 
