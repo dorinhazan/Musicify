@@ -22,8 +22,8 @@ app.use('/', SongsApi)
 // app.use('/', xyz)
 // app.use('/wishlist', wishlistApi)
 
-mongoose.connect( "mongodb://localhost/music-App", { useNewUrlParser: true }).then( () => {
-    app.listen( PORT, function(err, res){
-        console.group("the server runs on port " + PORT)
+mongoose.connect(process.env.MONGODB_URI||"mongodb://localhost/music-App", { useNewUrlParser: true }).then( () => {
+    app.listen( process.env.PORT||PORT, function(err, res){
+        console.group("The server runs on port " + PORT)
     })
 })
