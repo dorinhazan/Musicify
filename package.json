@@ -1,6 +1,9 @@
 {
   "name": "media-player",
   "version": "1.0.0",
+  "engines": {
+    "node": "v12.8.0"
+  },
   "main": "server.js",
   "scripts": {
   "test": "echo \"Error: no test specified\" && exit 1",
@@ -25,12 +28,6 @@
     "parser": "^0.1.4",
     "request": "^2.88.0",
     "spotify-web-api-node": "^4.0.0"
-  },
-    "name": "myapp",
-    "description": "a really cool app",
-    "version": "1.0.0",
-    "engines": {
-      "node": "v12.8.0"
-    }
+  }
 }
 
